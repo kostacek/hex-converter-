@@ -1,0 +1,14 @@
+import binascii
+
+# Replace 'hex_data_string' with your hex data
+hex_data_string = '89504E470D0A1A0A0000...FFD9'
+output_image = 'output_image.png'
+
+# Convert hex to bytes
+image_data = binascii.unhexlify(hex_data_string)
+
+# Write the bytes to a file
+with open(output_image, 'wb') as image_file:
+    image_file.write(image_data)
+
+print(f"Image saved as {output_image}")
